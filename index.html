@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>AutoAPR JavaScript Assessment</title>
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <div id="container">
+        <div class="content">
+        </div>
+    </div>
+    <div id="vehicles">
+        <div class="vehicle-item-container">
+            <ul class="vehicle-details">
+                <li>
+                    <span class="key">Year:</span>
+                    <span class="value">2019</span>
+                </li>
+                <li>
+                    <span class="key">Make:</span>
+                    <span class="value">Nissan</span>
+                </li>
+                <li>
+                    <span class="key">Model:</span>
+                    <span class="value">Altima</span>
+                </li>
+                <li>
+                    <span class="key">Trim:</span>
+                    <span class="value">2.5 SR</span>
+                </li>
+                <li>
+                    <span class="key">Body Style:</span>
+                    <span class="value">Sedan</span>
+                </li>
+                <li>
+                    <span class="key">Mileage:</span>
+                    <span class="value">0</span>
+                </li>
+                <li>
+                    <span class="key">VIN:</span>
+                    <span class="value">1N4BL4CV5KN317380</span>
+                </li>
+                <li>
+                    <span class="key">Stock:</span>
+                    <span class="value">N8269</span>
+                </li>
+                <li>
+                    <span class="key">Color:</span>
+                    <span class="value">Blue</span>
+                </li>
+            </ul>
+            <div class="vehicle-ctas">
+                <div class="btn">
+                    <a href="#">Get ePrice</a>
+                </div>
+                <div class="btn">
+                    <a href="#">Get Pre-Approved</a>
+                </div>
+                <div class="btn">
+                    <a href="#">Schedule Appointment</a>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="vehicle-item-container">
+            <ul class="vehicle-details">
+                <li>
+                    <span class="key">Year:</span>
+                    <span class="value">2019</span>
+                </li>
+                <li>
+                    <span class="key">Make:</span>
+                    <span class="value">Hyundai</span>
+                </li>
+                <li>
+                    <span class="key">Model:</span>
+                    <span class="value">Santa Fe</span>
+                </li>
+                <li>
+                    <span class="key">Trim:</span>
+                    <span class="value">SEL Plus</span>
+                </li>
+                <li>
+                    <span class="key">Body Style:</span>
+                    <span class="value">Sport Utility</span>
+                </li>
+                <li>
+                    <span class="key">Engine:</span>
+                    <span class="value">1.5L I4</span>
+                </li>
+                <li>
+                    <span class="key">Mileage:</span>
+                    <span class="value">0</span>
+                </li>
+                <li>
+                    <span class="key">VIN:</span>
+                    <span class="value">5NMS33AD2KH061307</span>
+                </li>
+                <li>
+                    <span class="key">Stock:</span>
+                    <span class="value">000P10009</span>
+                </li>
+            </ul>
+            <div class="vehicle-ctas">
+                <div class="btn">
+                    <a href="#">Get ePrice</a>
+                </div>
+                <div class="btn">
+                    <a href="#">Get Pre-Approved</a>
+                </div>
+                <div class="btn">
+                    <a href="#">Schedule Appointment</a>
+                </div>
+            </div>
+        </div>
+        <hr />
+    </div>
+    <script>
+        var container = document.getElementById("container");
+       container.innerHTML = '<p style="color: red;">Hey I\'m red!</p><br /><h3 style="color: blue;">I\'m a blue h3!</h3><br /><div style="border: 1px solid black; background: pink"><h1>I\'m in a div</h1><br /><p>ME TOO!</p></div>';
+       
+    </script>
+</body>
+</html>
+
+<!-- 
+    Complete the following exercises using ONLY JavaScript - do not add any HTML or CSS code. 
+    NOTE: You need to support Internet Explorer 10+. You do not need to support IE9 and down.
+
+    ------------------------------------------------------------------------------------------------------
+
+    Exercise 1: Add the following elements to the content container
+
+    1) a <p> with red text that says "Hey I'm red!"
+    2) an <h3> with blue text that says "I'm a blue h3!"
+    3) a <div> with a black border and pink background color with the following elements inside of it:
+        a) another <h1> that says "I'm in a div"
+        b) a <p> that says "ME TOO!"
+
+    ------------------------------------------------------------------------------------------------------
+
+    Exercise 2: Copy the array of books below and iterate through the array. For each book, append the following elements to the content container
+
+    1) a <p> with the book title and author. Change the font-weight and color of the <p> based on whether the book has been read or not.
+
+    var books = [
+        {title: 'The Hobbit',
+        author: 'J.R.R. Tolkien',
+        alreadyRead: true
+        },
+        {title: 'Moby Dick',
+        author: 'Herman Melville',
+        alreadyRead: false
+        },
+        {title: 'Wuthering Heights',
+        author: 'Emily Bronte',
+        alreadyRead: false
+        },
+        {title: 'Gulliver\'s Travels',
+        author: 'Jonathan Swift',
+        alreadyRead: true
+        }];
+    
+    ------------------------------------------------------------------------------------------------------
+
+    Exercise 3: Iterate through the vehicles, and add the following elements to each of the vehicle item containers
+
+    1) a <div> with the class "btn", placed between the "Get ePrice" btn div and the "Get Pre-Approved" btn div, with the following element inside of it:
+        a) an <a> that says "Calculate Your Payment" and href set to "https://www.example.com/{VIN HERE}" -- where {VIN HERE} is the value of the VIN for the corresponding vehicle
+            e.g. the href for first vehicle would be: "https://www.example.com/1N4BL4CV5KN317380"
+
+    ------------------------------------------------------------------------------------------------------
+
+-->
