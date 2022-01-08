@@ -117,9 +117,64 @@
         <hr />
     </div>
     <script>
-        var container = document.getElementById("container");
-       container.innerHTML = '<p style="color: red;">Hey I\'m red!</p><br /><h3 style="color: blue;">I\'m a blue h3!</h3><br /><div style="border: 1px solid black; background: pink"><h1>I\'m in a div</h1><br /><p>ME TOO!</p></div>';
+        var container = document.getElementById("container").getElementsByClassName('content')[0];
+       container.innerHTML = '<p style="color: red;">Hey I\'m red!</p><br />';
+       container.innerHTML += '<h3 style="color: blue;">I\'m a blue h3!</h3><br />';
+       container.innerHTML += '<div style="border: 1px solid black; background: pink"><h1>I\'m in a div</h1><br /><p>ME TOO!</p></div>';
        
+       var books = [
+           {title: 'The Hobbit',
+           author: 'J.R.R. Tolkien',
+           alreadyRead: true
+           },
+           {title: 'Moby Dick',
+           author: 'Herman Melville',
+           alreadyRead: false
+           },
+           {title: 'Wuthering Heights',
+           author: 'Emily Bronte',
+           alreadyRead: false
+           },
+           {title: 'Gulliver\'s Travels',
+           author: 'Jonathan Swift',
+           alreadyRead: true
+           }];
+           
+           for (i = 0; i < books.length; i++) {
+               console.log(books[i]);
+               if(books[i].alreadyRead) {
+                   console.log(books[i]);
+                container.innerHTML += `<p style="color: red; font-weight: bold;">${books[i].title} - ${books[i].author}</p>`;
+            } else {
+                container.innerHTML += `<p style="color: black; font-weight: normal;">${books[i].title} - ${books[i].author}</p>`;
+            }
+           }
+           
+           var parent = document.getElementById('vehicles');
+           
+           var list = document.getElementsByTagName('li');
+           
+           var vins = [];
+           
+           for(i = 0; i < list.length; i++) {
+               var key = list[i].getElementsByClassName('key');
+               var value = list[i].getElementsByClassName('value');
+               if(key[0].className == "key" && key[0].innerHTML == "VIN:" && value[0].className == "value") {
+                   vins.push(value[0].innerHTML);
+               }
+           }
+           
+           var ctas = parent.getElementsByClassName('vehicle-ctas');
+           
+           for(i = 0; i < ctas.length; i++) {
+               var btn = ctas[i].getElementsByClassName('btn')[0];
+               var btn2 = ctas[i].getElementsByClassName('btn')[1];
+               var newBtn = document.createElement('div');
+               newBtn.setAttribute('class', 'btn');
+               newBtn.innerHTML = `<a href="https://www.example.com/${vins[i]}">Calculate your payment</a>`;
+               var node = btn.parentNode;
+               node.insertBefore(newBtn, btn2);
+           }
     </script>
 </body>
 </html>
